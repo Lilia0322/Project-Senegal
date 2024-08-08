@@ -177,7 +177,7 @@ cm <- c(
   'cov_treat:EnvironmentThiel' = 'Covariate shock treatment*Thiel'
 )
 
-# Regression analysis for thesis
+# Regression analysis
 model_5_fec <- feols(avg_cooperation_sh ~ cov_treat + Round1 + age + woman + hhsize + education + cov_econ + cov_clim + cluster_high + belief_sh + risk_averse + trust_card + social_cap + groupsize + Environment | Village, vcov = ~ Village, data = main_treat)
 model_5_feh <- feols(avg_cooperation_sh ~ cov_treat + Round1 + age + woman + hhsize + education + cov_econ + cov_clim + cluster_high + belief_sh + risk_averse + trust_card + social_cap + groupsize + Environment, vcov = ~ Village, data = main_treat)
 model_5_ols <- feols(avg_cooperation_sh ~ cov_treat + Round1 + age + woman + hhsize + education + cov_econ + cov_clim + cluster_high + belief_sh + risk_averse + trust_card + social_cap + groupsize + Environment, data = main_treat)
